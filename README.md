@@ -1,16 +1,3 @@
-# Computer-Building-Software
-test
+## CBS
 
-## Paragraphe de penguin
-
-**ici un nouveau texte**
-
-`attention`
-
-(ici c'est google)[https://www.google.com]
-
-```javascript
-if (!test) {
-    set(ok);
-}
-```
+CBS stands for Computer-Building-Software. CBS is a fully free Computer maker software
