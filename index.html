@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PC Build Configurator</title>
+<!-- Importation du framework Pico.css depuis un CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+<main class="container">
+<header><h1>🖥️ PC Configurator</h1></header>
+<form id="configurator-form">
+<label> Processor (CPU)
+<select id="cpu-select" required>
+<option value="0">Select a CPU...</option>
+<option value="350">Intel Core i7-13700K ($350)</option>
+</select>
+</label>
+<label> Graphics Card (GPU)
+<select id="gpu-select" required>
+<option value="0">Select a GPU...</option>
+<option value="850">NVIDIA RTX 4080 ($850)</option>
+</select>
+</label>
+</label> Alimentations (PSU)
+<select id="psu-select" required>
+<option value="0">Select a PSU...</option>
+<option value="150">Corsair RM850x ($150)</option>
+<option value="100">Be Quiet ($100)</option>
+</select>
+</label>
+<button type="button" id="calc-btn">Calculate Total</button>
+</form>
+<footer><h3>Total Price: <span id="total-display">$0</span></h3></footer>
+</main>
+</body>
+</html>
