@@ -8,3 +8,7 @@ console.log("---- CPU INFO ----");
 console.log("Name:", cpuName);
 console.log("Price ($):", cpuPrice);
 console.log("Available:", isInStock);
+const buildOneTotal = calculateTotalPrice(350, 850, 120, 90);
+console.log("Client Build 1 Total:", "$" + buildOneTotal);
+const buildTwoTotal = calculateTotalPrice(120, 200, 60, 45);
+console.log("Budget Build 2 Total:", "$" + buildTwoTotal);
