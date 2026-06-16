@@ -98,7 +98,6 @@ h2 {
 }
 
 html, body {
-    html, body 
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
@@ -121,33 +120,12 @@ html, body {
     }
 }
 
-/* ==========================================================
-   LE COMPARTIMENT CONFIGURATEUR (Effet Verre Dépoli)
-   ========================================================== */
 #configurator-form {
-    /* Un fond sombre mais semi-transparent pour laisser deviner le dégradé derrière */
-    background: rgba(30, 41, 59, 0.65) !important; 
-    
-    /* L'effet magique de flou à l'arrière du formulaire */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    
-    /* Des bordures fines et des angles arrondis style premium */
+    background: rgba(1, 1, 2, 0.45) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 16px !important;
-    
-    /* Une ombre portée pour décoller le formulaire du fond */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    
-    /* On donne de l'espace pour que les menus respirent à l'intérieur */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     padding: 40px !important;
     max-width: 700px;
-    margin: 0 auto; /* Centre le formulaire horizontalement */
-}
-
-/* On s'assure que Pico.css affiche les textes des labels en blanc brillant */
-#configurator-form label {
-    color: #f8fafc !important;
-    font-weight: 500;
-    margin-bottom: 15px;
+    margin: 0 auto;
 }
