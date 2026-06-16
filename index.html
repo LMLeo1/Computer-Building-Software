@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>PC Build Configurator</title>
-    <!-- Importation du framework Pico.css depuis un CDN -->
+    <!-- Importation du framework Pico.css depuis un CDN --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-</head>
+</head> <link rel="stylesheet" href="style.css">
 
 <body>
     <main class="container">
         <header>
-            <h1>🖥️ PC Configurator by Léo</h1>
+            <h1>🖥️ PC Configurator
+            </h1>
         </header>
         <form id="configurator-form">
             <label> Processor (CPU)
@@ -24,14 +25,17 @@
                 <select id="gpu-select" required>
                     <option value="0">Select a GPU...</option>
                     <option value="850">NVIDIA RTX 4080 ($850)</option>
+                    <option value="650">NVIDIA RTX 4070 Super ($650)</option>
+                    <option value="330">AMD RX 7600 XT ($330)</option>
+                    <option value="500">NVIDIA RTX 3060 ($500)</option>
                 </select>
             </label>
-            </label> Alimentations (PSU)
-            <select id="psu-select" required>
-                <option value="0">Select a PSU...</option>
-                <option value="150">Corsair RM850x ($150)</option>
-                <option value="100">Be Quiet ($100)</option>
-            </select>
+            <label> Alimentations (PSU)
+                <select id="psu-select" required>
+                    <option value="0">Select a PSU...</option>
+                    <option value="150">Corsair RM850x ($150)</option>
+                    <option value="100">Be Quiet ($100)</option>
+                </select>
             </label>
             <button type="button" id="calc-btn">Calculate Total</button>
         </form>

@@ -1,0 +1,28 @@
+body {
+    background-color: #111828;
+    color: #f8fafc;
+}
+
+article {
+    background-color: #1e293b !important;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+button {
+    background-color: #a855f7;
+    border-color: #a855f7;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+background-color: #c084fc; 
+box-shadow: 0 0 15px #c084fc;
+}
+
+#total-display {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #22c55e;
+}
