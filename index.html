@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PC Build Configurator</title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
     <link rel="icon" type="image/png" href="gemini-svg.png">
@@ -18,7 +18,7 @@
         <div class="welcome-content">
             <h1>Léo's PC Build Configurator</h1>
             <h2>First website project, made with HTML, CSS and JS.</h2>
-            
+
             <a href="#configurator-zone" class="btn-white">
                 Commencer le montage <span class="arrow">➔</span>
             </a>
@@ -30,36 +30,47 @@
             <form id="configurator-form">
                 <select id="cpu-select" required>
                     <option value="0">Select a CPU...</option>
+
+                    <option value="300">Intel Core i5-14600K ($300)</option>
                     <option value="350">Intel Core i7-13700K ($350)</option>
+                    <option value="400">Intel Core i7-14700K ($400)</option>
+                    <option value="390">Intel Core Ultra 7 265K ($390)</option>
+                    <option value="550">Intel Core i9-14900K ($550)</option>
+
+                    <option value="220">AMD Ryzen 5 7600X ($220)</option>
+                    <option value="370">AMD Ryzen 7 7800X3D ($370)</option>
+                    <option value="480">AMD Ryzen 7 9800X3D ($480)</option>
                     <option value="450">AMD Ryzen 9 7950X ($450)</option>
+                    <option value="650">AMD Ryzen 9 9950X ($650)</option>
                 </select>
-            </label>
-            <label> Graphics Card (GPU)
-                <select id="gpu-select" required>
-                    <option value="0">Select a GPU...</option>
-                    <option value="1999">NVIDIA RTX 5090 ($1999)</option>
-                    <option value="999">NVIDIA RTX 5080 ($999)</option>
-                    <option value="549">NVIDIA RTX 5070 ($549)</option>
-                    <option value="549">NVIDIA RTX 5070 Ti ($549)</option>
-                    <option value="300">NVIDIA RTX 5060 ($300)</option>
-                    <option value="549">NVIDIA RTX 4070 Super ($549)</option>
-                    <option value="1050">NVIDIA RTX 4080 Super ($1050)</option>
-                </select>
-            </label>
-            <label> Alimentations (PSU)
-                <select id="psu-select" required>
-                    <option value="0">Select a PSU...</option>
-                    <option value="150">Corsair RM850x ($150)</option>
-                    <option value="100">Be Quiet ($100)</option>
-                </select>
-            </label>
-            <button type="button" id="calc-btn">Calculate Total</button>
-        </form>
-        <footer>
-            <h3>Total Price: <span id="total-display">$0</span></h3>
-        </footer>
-    </main>
-    
-    <script src="script.js"></script>
+                </label>
+                <label> Graphics Card (GPU)
+                    <select id="gpu-select" required>
+                        <option value="0">Select a GPU...</option>
+                        <option value="1999">NVIDIA RTX 5090 ($1999)</option>
+                        <option value="999">NVIDIA RTX 5080 ($999)</option>
+                        <option value="549">NVIDIA RTX 5070 ($549)</option>
+                        <option value="549">NVIDIA RTX 5070 Ti ($549)</option>
+                        <option value="300">NVIDIA RTX 5060 ($300)</option>
+                        <option value="549">NVIDIA RTX 4070 Super ($549)</option>
+                        <option value="1050">NVIDIA RTX 4080 Super ($1050)</option>
+                    </select>
+                </label>
+                <label> Alimentations (PSU)
+                    <select id="psu-select" required>
+                        <option value="0">Select a PSU...</option>
+                        <option value="150">Corsair RM850x ($150)</option>
+                        <option value="100">Be Quiet ($100)</option>
+                    </select>
+                </label>
+                <button type="button" id="calc-btn">Calculate Total</button>
+            </form>
+            <footer>
+                <h3>Total Price: <span id="total-display">$0</span></h3>
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
 </body>
+
 </html>
