@@ -129,3 +129,24 @@ html, body {
     max-width: 700px;
     margin: 0 auto;
 }
+
+.btn-white {
+    background-color: #e5e3e3 !important;
+    color: #0f172a !important; /* Texte sombre pour un contraste maximal */
+    border: none;
+    padding: 14px 28px;        /* Même taille exacte que le bouton calculer */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;        /* Forme rectangulaire moderne (comme le bouton calculer) */
+    text-decoration: none;     /* Enlève le soulignement du lien */
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-white:hover {
+    transform: translateY(-2px); /* Le bouton se soulève de 2 pixels */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
