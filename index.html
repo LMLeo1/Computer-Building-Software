@@ -63,13 +63,18 @@
                         <option value="100">Be Quiet ($100)</option>
                     </select>
                 </label>
-                <button type="button" id="calc-btn">Calculate Total</button>
+                <form id="configurator-form">
+                    <div class="footer-actions">
+                        <button type="button" id="calc-btn">Calculate Total</button>
+                        <div id="price-box">
+                            <span id="total-label">Total:</span>
+                            <span id="total-display">$0</span>
+                        </div>
+                    </div>
             </form>
-            <footer>
-                <h3>Total Price: <span id="total-display">$0</span></h3>
             </footer>
         </main>
-       <script src="gpu-data.js"></script>
+        <script src="gpu-data.js"></script>
         <script src="cpu-data.js"></script>
         <script src="script.js"></script>
 </body>
