@@ -1,6 +1,8 @@
-## CBS
+# This is Léo's Pc Building Website !
 
-CBS stands for Computer-Building-Software. CBS is a fully free Computer maker software.
+*Made By Léo*
+
+**WEBSITE IS NOT FINISHED RN !**
 
 ## 🚀 Features
 
