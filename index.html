@@ -4,30 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <title>PC Build Configurator</title>
-    <!-- Importation du framework Pico.css depuis un CDN --> 
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-</head> <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="gemini-svg.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <main class="container">
-        <header>
-            <h1>🖥️ PC Configurator
-            </h1>
-        </header>
-        <form id="configurator-form">
+
+    <section id="welcome-screen">
+        <div class="welcome-content">
+            <h1>Léo's PC Build Configurator</h1>
+            <h2>First website project, made with HTML, CSS and JS.</h2>
+            
+            <a href="#configurator-zone" class="btn-white">
+                Commencer le montage <span class="arrow">➔</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="configurator-zone">
+        <main class="container">
+            <form id="configurator-form">
             <label> Processor (CPU)
                 <select id="cpu-select" required>
                     <option value="0">Select a CPU...</option>
                     <option value="350">Intel Core i7-13700K ($350)</option>
+                    <option value="450">AMD Ryzen 9 7950X ($450)</option>
                 </select>
             </label>
             <label> Graphics Card (GPU)
                 <select id="gpu-select" required>
                     <option value="0">Select a GPU...</option>
-                    <option value="850">NVIDIA RTX 4080 ($850)</option>
-                    <option value="650">NVIDIA RTX 4070 Super ($650)</option>
-                    <option value="330">AMD RX 7600 XT ($330)</option>
-                    <option value="500">NVIDIA RTX 3060 ($500)</option>
+                    <option value="1999">NVIDIA RTX 5090 ($1999)</option>
+                    <option value="999">NVIDIA RTX 5080 ($999)</option>
+                    <option value="549">NVIDIA RTX 5070 ($549)</option>
+                    <option value="549">NVIDIA RTX 5070 Ti ($549)</option>
+                    <option value="300">NVIDIA RTX 5060 ($300)</option>
+                    <option value="549">NVIDIA RTX 4070 Super ($549)</option>
+                    <option value="1050">NVIDIA RTX 4080 Super ($1050)</option>
                 </select>
             </label>
             <label> Alimentations (PSU)

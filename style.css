@@ -1,7 +1,11 @@
 body {
-    background-color: #111828;
-    color: #f8fafc;
+    background: linear-gradient(135deg, #010102 0%, #2010f2 100%);
+    color: #f8fafc; /* Texte blanc/argenté pour que ce soit lisible */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
 }
+
 
 article {
     background-color: #1e293b !important;
@@ -10,19 +14,140 @@ article {
 }
 
 button {
-    background-color: #a855f7;
-    border-color: #a855f7;
-    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #0101fd 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
 
 button:hover {
-background-color: #c084fc; 
-box-shadow: 0 0 15px #c084fc;
+background-color: #0101fd; 
+box-shadow: 0 0 15px #0101fd;
+transform: translateY(-2px);
 }
+
 
 #total-display {
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #22c55e;
+}
+
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;   /* Force le texte en majuscules style industriel */
+    letter-spacing: 4px;         /* Alonge l'espace entre les lettres pour un effet tech */
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    /* MAGIE : On applique le dégradé à l'intérieur des lettres */
+    background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* L'effet de lueur (Glow) en arrière-plan */
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+h2 {
+    font-size: 1.2rem;        
+    text-align: center;       
+    color: #0d72ff;           
+    font-weight: 400;       
+    letter-spacing: 1px;     
+    margin-bottom: 40px;       
+}
+
+#welcome-screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box;
+    
+    /* On force la transparence ici */
+    background: transparent !important; 
+}
+
+
+.welcome-content {
+    max-width: 800px;        
+    margin: 0 auto;
+}
+
+.welcome-content h2 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+html, body {
+    html, body 
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    /* LE DÉGRADÉ GLOBAL FIXE */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) !important;
+    background-attachment: fixed; /* Garde le fond immobile pendant le scroll */
+    }
+
+@keyframes slideDownEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);   
+    }
+}
+
+/* ==========================================================
+   LE COMPARTIMENT CONFIGURATEUR (Effet Verre Dépoli)
+   ========================================================== */
+#configurator-form {
+    /* Un fond sombre mais semi-transparent pour laisser deviner le dégradé derrière */
+    background: rgba(30, 41, 59, 0.65) !important; 
+    
+    /* L'effet magique de flou à l'arrière du formulaire */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Des bordures fines et des angles arrondis style premium */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    
+    /* Une ombre portée pour décoller le formulaire du fond */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    
+    /* On donne de l'espace pour que les menus respirent à l'intérieur */
+    padding: 40px !important;
+    max-width: 700px;
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+/* On s'assure que Pico.css affiche les textes des labels en blanc brillant */
+#configurator-form label {
+    color: #f8fafc !important;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
