@@ -32,32 +32,36 @@
                     <select id="cpu-select" required>
                         <option value="0">Select a CPU...</option>
 
-                    <option value="300">Intel Core i5-14600K ($300)</option>
-                    <option value="350">Intel Core i7-13700K ($350)</option>
-                    <option value="400">Intel Core i7-14700K ($400)</option>
-                    <option value="390">Intel Core Ultra 7 265K ($390)</option>
-                    <option value="550">Intel Core i9-14900K ($550)</option>
+                        <option value="300" data-socket="intel">Intel Core i5-14600K ($300)</option>
+                        <option value="350" data-socket="intel">Intel Core i7-13700K ($350)</option>
+                        <option value="400" data-socket="intel">Intel Core i7-14700K ($400)</option>
+                        <option value="390" data-socket="intel">Intel Core Ultra 7 265K ($390)</option>
+                        <option value="550" data-socket="intel">Intel Core i9-14900K ($550)</option>
 
-                    <option value="220">AMD Ryzen 5 7600X ($220)</option>
-                    <option value="370">AMD Ryzen 7 7800X3D ($370)</option>
-                    <option value="480">AMD Ryzen 7 9800X3D ($480)</option>
-                    <option value="450">AMD Ryzen 9 7950X ($450)</option>
-                    <option value="650">AMD Ryzen 9 9950X ($650)</option>
-                </select>
+                        <option value="220" data-socket="amd">AMD Ryzen 5 7600X ($220)</option>
+                        <option value="370" data-socket="amd">AMD Ryzen 7 7800X3D ($370)</option>
+                        <option value="480" data-socket="amd">AMD Ryzen 7 9800X3D ($480)</option>
+                        <option value="450" data-socket="amd">AMD Ryzen 9 7950X ($450)</option>
+                        <option value="650" data-socket="amd">AMD Ryzen 9 9950X ($650)</option>
+                    </select>
                 </label>
                 <label> Motherboard
                     <select id="mb-select" required>
                         <option value="">Select a Motherboard...</option>
 
-                        <option value="200">ASUS Prime Z790-P ($200)</option>
-                        <option value="180">MSI MAG B760 Tomahawk ($180)</option>
-                        <option value="260">Gigabyte Z790 Aorus Elite ($260)</option>
-                        <option value="380">ASUS ROG Strix Z790-F ($380)</option>
+                        <option value="150" data-socket="intel">ASUS Prime B760M-K ($150)</option>
+                        <option value="180" data-socket="intel">MSI MAG B760 Tomahawk ($180)</option>
+                        <option value="200" data-socket="intel">ASUS Prime Z790-P ($200)</option>
+                        <option value="260" data-socket="intel">Gigabyte Z790 Aorus Elite ($260)</option>
+                        <option value="320" data-socket="intel">MSI MPG Z790 Edge WiFi ($320)</option>
+                        <option value="380" data-socket="intel">ASUS ROG Strix Z790-F ($380)</option>
 
-                        <option value="160">ASUS Prime B650M-A ($160)</option>
-                        <option value="210">MSI MAG B650 Tomahawk ($210)</option>
-                        <option value="230">Gigabyte B650 Aorus Elite ($230)</option>
-                        <option value="420">ASUS ROG Strix X670E-F ($420)</option>
+                        <option value="140" data-socket="amd">ASUS Prime A620M-A ($140)</option>
+                        <option value="160" data-socket="amd">ASUS Prime B650M-A ($160)</option>
+                        <option value="210" data-socket="amd">MSI MAG B650 Tomahawk ($210)</option>
+                        <option value="230" data-socket="amd">Gigabyte B650 Aorus Elite ($230)</option>
+                        <option value="290" data-socket="amd">MSI MPG X670E Carbon ($290)</option>
+                        <option value="420" data-socket="amd">ASUS ROG Strix X670E-F ($420)</option>
                     </select>
                 </label>
                 <label> Graphics Card (GPU)
@@ -89,7 +93,7 @@
                     </div>
                 </form>
         </main>
-        <script src="motherboa
+        <script src="motherboard-data.js"></script>
         <script src="gpu-data.js"></script>
         <script src="cpu-data.js"></script>
         <script src="script.js"></script>
