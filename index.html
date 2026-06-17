@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
-    <link rel="icon" type="image/png" href="gemini-svg.png">
+    <link rel="icon" type="image/png" href="icon.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,8 +28,9 @@
     <section id="configurator-zone">
         <main class="container">
             <form id="configurator-form">
-                <select id="cpu-select" required>
-                    <option value="0">Select a CPU...</option>
+                <label> Central Processing Unit (CPU)
+                    <select id="cpu-select" required>
+                        <option value="0">Select a CPU...</option>
 
                     <option value="300">Intel Core i5-14600K ($300)</option>
                     <option value="350">Intel Core i7-13700K ($350)</option>
@@ -43,6 +44,21 @@
                     <option value="450">AMD Ryzen 9 7950X ($450)</option>
                     <option value="650">AMD Ryzen 9 9950X ($650)</option>
                 </select>
+                </label>
+                <label> Motherboard
+                    <select id="mb-select" required>
+                        <option value="">Select a Motherboard...</option>
+
+                        <option value="200">ASUS Prime Z790-P ($200)</option>
+                        <option value="180">MSI MAG B760 Tomahawk ($180)</option>
+                        <option value="260">Gigabyte Z790 Aorus Elite ($260)</option>
+                        <option value="380">ASUS ROG Strix Z790-F ($380)</option>
+
+                        <option value="160">ASUS Prime B650M-A ($160)</option>
+                        <option value="210">MSI MAG B650 Tomahawk ($210)</option>
+                        <option value="230">Gigabyte B650 Aorus Elite ($230)</option>
+                        <option value="420">ASUS ROG Strix X670E-F ($420)</option>
+                    </select>
                 </label>
                 <label> Graphics Card (GPU)
                     <select id="gpu-select" required>
@@ -73,6 +89,7 @@
                     </div>
                 </form>
         </main>
+        <script src="motherboa
         <script src="gpu-data.js"></script>
         <script src="cpu-data.js"></script>
         <script src="script.js"></script>

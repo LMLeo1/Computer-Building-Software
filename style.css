@@ -42,7 +42,7 @@ transform: translateY(-2px);
 
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3.0rem;
     text-align: center;
     text-transform: uppercase;   /* Force le texte en majuscules style industriel */
     letter-spacing: 4px;         /* Alonge l'espace entre les lettres pour un effet tech */
@@ -50,7 +50,7 @@ h1 {
     margin-bottom: 20px;
 
     /* MAGIE : On applique le dégradé à l'intérieur des lettres */
-    background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%);
+    background: linear-gradient(45deg, #00f2fe 0%, #0388fc 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
