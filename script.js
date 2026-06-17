@@ -61,7 +61,7 @@ saveBtn.addEventListener("click", () => {
     
     // Bouton Supprimer
     const delBtn = document.createElement("button");
-    delBtn.textContent = "X";
+    delBtn.textContent = "Delete config";
     delBtn.onclick = () => li.remove();
 
     li.appendChild(loadBtn);

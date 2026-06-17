@@ -37,7 +37,7 @@ transform: translateY(-2px);
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #22c55e;
+    color: #001aff;
 }
 
 
@@ -180,4 +180,33 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;   
+    text-align: left;
+
+    background: linear-gradient(45deg, #00f2fe 0%, #0388fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+h4  {
+font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;   
+    text-align: left;
+
+    background: linear-gradient(45deg, #00f2fe 0%, #0388fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
