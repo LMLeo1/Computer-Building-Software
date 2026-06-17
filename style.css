@@ -126,8 +126,8 @@ html, body {
     border-radius: 16px !important;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     padding: 40px !important;
-    max-width: 700px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 
 .btn-white {
@@ -170,4 +170,14 @@ html, body {
 #total-display {
     color: #00f2fe; /* La couleur cyan de ton titre pour faire un rappel */
     font-weight: bold;
+}
+
+#configurator-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;                    
+    align-items: center;   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }

@@ -1,3 +1,4 @@
+// 1. Sélection des éléments
 const calculateButton = document.getElementById("calc-btn");
 const cpuSelect = document.getElementById("cpu-select");
 const gpuSelect = document.getElementById("gpu-select");
@@ -5,66 +6,70 @@ const psuSelect = document.getElementById("psu-select");
 const motherboardSelect = document.getElementById("mb-select");
 const totalDisplay = document.getElementById("total-display");
 
-    const handleCalculation = function() {
-    const selectedCpuPrice = Number(cpuSelect.value);
-    const selectedGpuPrice = Number(gpuSelect.value);
-    const selectedPsuPrice = Number(psuSelect.value);
-    const selectedMotherboardPrice = Number(motherboardSelect.value);
-    const totalPrice = selectedCpuPrice + selectedGpuPrice + selectedPsuPrice + selectedMotherboardPrice;
-    totalDisplay.textContent = `$${totalPrice.toFixed(2)}`; 
+const configNameInput = document.getElementById("config-name");
+const configsUl = document.getElementById("configs-ul");
+
+// 2. Fonction de calcul
+const handleCalculation = function () {
+    const selectedCpuPrice = Number(cpuSelect.value) || 0;
+    const selectedGpuPrice = Number(gpuSelect.value) || 0;
+    const selectedPsuPrice = Number(psuSelect.value) || 0;
+    const selectedMbPrice = Number(motherboardSelect.value) || 0;
+
+    const totalPrice = selectedCpuPrice + selectedGpuPrice + selectedPsuPrice + selectedMbPrice;
+    totalDisplay.textContent = `${totalPrice.toFixed(2)}€`;
 };
-    calculateButton.addEventListener("click", handleCalculation); 
 
-
-function filterMotherboards() {
-    const selectedSocket = cpuSelect.options[cpuSelect.selectedIndex].dataset.socket;
-    const mbOptions = motherboardSelect.options;
-
-    for (let i = 0; i < mbOptions.length; i++) {
-        const option = mbOptions[i];
-
-        // L'option par défaut (value="") reste toujours visible
-        if (option.value === "") {
-            option.style.display = "block";
-            continue;
-        }
-
-        // Si le socket correspond, on affiche, sinon on cache
-        if (option.dataset.socket === selectedSocket) {
-            option.style.display = "block";
-        } else {
-            option.style.display = "none";
-        }
-    }
-}
-
-// 1. On lance le filtre quand on change le CPU
+// 3. Logique de filtrage (Compatibilité)
 cpuSelect.addEventListener("change", () => {
+    // 1. On récupère le socket choisi
     const selectedSocket = cpuSelect.options[cpuSelect.selectedIndex].dataset.socket;
     const mbOptions = motherboardSelect.options;
 
-    // 1. On réinitialise la sélection à "Select a Motherboard..."
-    motherboardSelect.value = ""; 
+    // 2. Reset de la sélection
+    motherboardSelect.value = "";
 
-    // 2. On parcourt les options
+    // 3. On parcourt les options pour les activer ou les désactiver
     for (let i = 0; i < mbOptions.length; i++) {
         const option = mbOptions[i];
 
+        // On laisse toujours l'option vide ("Select a Motherboard...") activée
         if (option.value === "") {
-            option.style.display = "block";
-            continue;
-        }
-
-        if (option.dataset.socket === selectedSocket) {
-            option.style.display = "block";
+            option.disabled = false;
         } else {
-            option.style.display = "none";
+            // Si le socket correspond, on active (disabled = false)
+            // Sinon, on désactive (disabled = true)
+            option.disabled = (option.dataset.socket !== selectedSocket);
         }
     }
 });
 
-// 2. On lance le filtre au démarrage (au cas où un CPU est pré-sélectionné)
-filterMotherboards();
+/// 1. Récupération des éléments
+const saveBtn = document.getElementById("save-btn");
 
-    // 4. On réinitialise la sélection de la carte mère pour éviter les erreurs
-    motherboardSelect.value = ""
+// 2. Action simple
+saveBtn.addEventListener("click", () => {
+    const name = configNameInput.value;
+    if (!name) {
+        alert("Entre un nom !");
+        return;
+    }
+
+    // Création de l'élément de liste
+    const li = document.createElement("li");
+    li.textContent = name + " ";
+
+    // Création du bouton
+    const btn = document.createElement("button");
+    btn.textContent = "Delete";
+    btn.onclick = function() {
+        li.remove();
+    };
+
+    // Assemblage
+    li.appendChild(btn);
+    configsUl.appendChild(li);
+
+    // Nettoyage
+    configNameInput.value = "";
+});
