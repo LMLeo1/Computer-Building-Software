@@ -87,3 +87,47 @@ function loadConfig(parts) {
     handleCalculation();
     alert("Configuration chargée !");
 }
+
+// La fonction est "async" car elle attend des données externes
+async function initialiserConfigurateur() {
+    const response = await fetch('catalog.json');
+    const data = await response.json();
+
+    const cpuSelect = document.getElementById("cpu-select");
+
+    // On boucle sur chaque CPU de ton JSON
+    data.cpus.forEach(cpu => {
+        const option = document.createElement("option");
+        option.value = cpu.price; // Le prix comme valeur
+        option.textContent = `${cpu.name} (${cpu.price}€)`; // Le texte affiché
+        option.dataset.socket = cpu.socket; // On garde l'info du socket
+        cpuSelect.appendChild(option);
+    });
+
+    data.motherboards.forEach(mb => {
+        const option = document.createElement("option");
+        option.value = mb.price; // Le prix comme valeur
+        option.textContent = `${mb.name} (${mb.price}€)`; // Le texte affiché
+        option.dataset.socket = mb.socket; // On garde l'info du socket
+        motherboardSelect.appendChild(option);
+    });
+
+    data.gpus.forEach(gpu => {
+        const option = document.createElement("option");
+        option.value = gpu.price; // Le prix comme valeur
+        option.textContent = `${gpu.name} (${gpu.price}€)`; // Le texte affiché
+        option.dataset.powerRequired = gpu.powerRequired; // On garde l'info de la puissance requise
+        gpuSelect.appendChild(option);
+    });
+
+    data.psus.forEach(psu => {
+        const option = document.createElement("option");
+        option.value = psu.price; // Le prix comme valeur
+        option.textContent = `${psu.name} (${psu.price}€)`; // Le texte affiché
+        option.dataset.powerOutput = psu.powerOutput; // On garde l'info de la puissance fournie
+        psuSelect.appendChild(option);
+    });
+}
+
+// Appelle la fonction au chargement
+initialiserConfigurateur();

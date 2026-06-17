@@ -1,0 +1,40 @@
+{
+  "cpus": [
+    { "name": "Intel Core i5-14600K", "price": 300, "socket": "intel" },
+    { "name": "Intel Core i7-13700K", "price": 350, "socket": "intel" },
+    { "name": "Intel Core i7-14700K", "price": 400, "socket": "intel" },
+    { "name": "Intel Core Ultra 7 265K", "price": 390, "socket": "intel" },
+    { "name": "Intel Core i9-14900K", "price": 550, "socket": "intel" },
+    { "name": "AMD Ryzen 5 7600X", "price": 220, "socket": "amd" },
+    { "name": "AMD Ryzen 7 7800X3D", "price": 370, "socket": "amd" },
+    { "name": "AMD Ryzen 7 9800X3D", "price": 480, "socket": "amd" },
+    { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd" },
+    { "name": "AMD Ryzen 9 9950X", "price": 650, "socket": "amd" }
+  ],
+  "gpus": [
+    { "name": "NVIDIA RTX 5090", "price": 1999, "powerRequired": 900 },
+    { "name": "NVIDIA RTX 5080", "price": 999, "powerRequired": 850 },
+    { "name": "NVIDIA RTX 5070", "price": 549, "powerRequired": 600 },
+    { "name": "NVIDIA RTX 5070 Ti", "price": 549, "powerRequired": 750 },
+    { "name": "NVIDIA RTX 5060", "price": 300, "powerRequired": 500 },
+    { "name": "NVIDIA RTX 4080 Super", "price": 1050, "powerRequired": 750 },
+    { "name": "NVIDIA RTX 4070 Super", "price": 549, "powerRequired": 600 }
+  ],
+  "motherboards": [
+    { "name": "ASUS Prime Z790-P", "price": 200, "socket": "intel" },
+    { "name": "MSI MAG B760 Tomahawk", "price": 180, "socket": "intel" },
+    { "name": "Gigabyte Z790 Aorus Elite", "price": 260, "socket": "intel" },
+    { "name": "ASUS ROG Strix Z790-F", "price": 380, "socket": "intel" },
+    { "name": "ASUS Prime B650M-A", "price": 160, "socket": "amd" },
+    { "name": "MSI MAG B650 Tomahawk", "price": 210, "socket": "amd" },
+    { "name": "Gigabyte B650 Aorus Elite", "price": 230, "socket": "amd" },
+    { "name": "ASUS ROG Strix X670E-F", "price": 420, "socket": "amd" }
+  ],
+  "psus": [
+    { "name": "Corsair RM850x (850W)", "price": 150 },
+    { "name": "Be Quiet! Pure Power 12M (750W)", "price": 110 },
+    { "name": "EVGA SuperNOVA 1000 GT (1000W)", "price": 190 },
+    { "name": "MSI MAG A850GL (850W)", "price": 130 },
+    { "name": "Seasonic Focus GX-750 (750W)", "price": 120 }
+  ]
+}
