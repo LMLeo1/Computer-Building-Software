@@ -141,3 +141,35 @@ async function initialiserConfigurateur() {
 
 // Appelle la fonction au chargement
 initialiserConfigurateur();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loginLink = document.getElementById("login-link");
+    const logoutBtn = document.getElementById("logout-btn");
+    const welcomeMessage = document.getElementById("welcome-message");
+    
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+
+    if (user) {
+        // --- CAS : UTILISATEUR CONNECTÉ ---
+        welcomeMessage.textContent = `Connecté en tant que ${user.username}`;
+        const promoText = document.getElementById("promo-text");
+        if (promoText) promoText.style.display = "none";
+        
+        loginLink.style.display = "none";    // On cache le bouton "Se connecter"
+        logoutBtn.style.display = "inline";  // On affiche le bouton "Déconnexion"
+    } else {
+        // --- CAS : UTILISATEUR DÉCONNECTÉ ---
+        welcomeMessage.textContent = "";     // Rien à afficher
+        const promoText = document.getElementById("promo-text");
+        if (promoText) promoText.style.display = "block";
+        
+        loginLink.style.display = "inline";  // On montre "Se connecter"
+        logoutBtn.style.display = "none";    // On cache le bouton "Déconnexion"
+    }
+
+    // Gestion de la déconnexion
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem('currentUser');
+        window.location.reload(); // Recharge la page pour tout réinitialiser
+    });
+});

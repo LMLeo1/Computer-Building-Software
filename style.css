@@ -215,8 +215,9 @@ font-size: 1.5rem;
     background-color: rgba(0, 112, 243, 0.8);
     backdrop-filter: blur(5px);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Un peu d'espace sur les côtés */
     position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -224,27 +225,25 @@ font-size: 1.5rem;
     
     /* La magie Flexbox */
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between; /* Espace entre le texte et le bouton */
+    align-items: center; /* Aligne le texte et le bouton au milieu verticalement */
 }
 
 .top-banner p {
-    margin: 0; 
+    margin: 0; /* Enlève la marge par défaut du paragraphe */
     font-weight: bold;
+    display: flex;
+    justify-content: space-between; /* C'est cette ligne qui fait tout le travail ! */
+    align-items: center;
 }
 
 .login-btn {
-    margin: 0;
-    padding: 8px 12px;
-    font-size: 0.85rem;
+    padding: 10px 12px;
+    background: linear-gradient(90deg, #0084ff 0%, #52aeff 100%);
     background-color: white;
-    color: #0070f3;
-    border: none;
+    color: #ffffff;
     border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-body {
-    padding-top: 60px; 
+    text-decoration: none; 
+    font-weight: bold;
+    display: inline-block;   
 }
