@@ -1,40 +1,88 @@
 {
   "cpus": [
+    { "name": "Intel Core i3-14100F", "price": 120, "socket": "intel" },
+    { "name": "Intel Core i5-13400F", "price": 200, "socket": "intel" },
     { "name": "Intel Core i5-14600K", "price": 300, "socket": "intel" },
     { "name": "Intel Core i7-13700K", "price": 350, "socket": "intel" },
     { "name": "Intel Core i7-14700K", "price": 400, "socket": "intel" },
     { "name": "Intel Core Ultra 7 265K", "price": 390, "socket": "intel" },
     { "name": "Intel Core i9-14900K", "price": 550, "socket": "intel" },
+
+    { "name": "AMD Ryzen 5 7500F", "price": 170, "socket": "amd" },
     { "name": "AMD Ryzen 5 7600X", "price": 220, "socket": "amd" },
+    { "name": "AMD Ryzen 7 7700X", "price": 300, "socket": "amd" },
     { "name": "AMD Ryzen 7 7800X3D", "price": 370, "socket": "amd" },
-    { "name": "AMD Ryzen 7 9800X3D", "price": 480, "socket": "amd" },
+    { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd" },
     { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd" },
     { "name": "AMD Ryzen 9 9950X", "price": 650, "socket": "amd" }
   ],
   "gpus": [
     { "name": "NVIDIA RTX 5090", "price": 1999, "powerRequired": 900 },
     { "name": "NVIDIA RTX 5080", "price": 999, "powerRequired": 850 },
+    { "name": "NVIDIA RTX 5070 Ti", "price": 749, "powerRequired": 750 },
     { "name": "NVIDIA RTX 5070", "price": 549, "powerRequired": 600 },
-    { "name": "NVIDIA RTX 5070 Ti", "price": 549, "powerRequired": 750 },
+    { "name": "NVIDIA RTX 5060 Ti", "price": 449, "powerRequired": 550 },
     { "name": "NVIDIA RTX 5060", "price": 300, "powerRequired": 500 },
+    { "name": "NVIDIA RTX 4090", "price": 1799, "powerRequired": 850 },
     { "name": "NVIDIA RTX 4080 Super", "price": 1050, "powerRequired": 750 },
-    { "name": "NVIDIA RTX 4070 Super", "price": 549, "powerRequired": 600 }
+    { "name": "NVIDIA RTX 4070 Ti Super", "price": 849, "powerRequired": 700 },
+    { "name": "NVIDIA RTX 4070 Super", "price": 649, "powerRequired": 650 },
+    { "name": "NVIDIA RTX 4060 Ti", "price": 399, "powerRequired": 550 },
+
+    { "name": "AMD Radeon RX 7900 XTX", "price": 999, "powerRequired": 800 },
+    { "name": "AMD Radeon RX 7900 XT", "price": 799, "powerRequired": 750 },
+    { "name": "AMD Radeon RX 7900 GRE", "price": 599, "powerRequired": 700 },
+    { "name": "AMD Radeon RX 7800 XT", "price": 549, "powerRequired": 650 },
+    { "name": "AMD Radeon RX 7700 XT", "price": 449, "powerRequired": 650 },
+    { "name": "AMD Radeon RX 7600 XT", "price": 349, "powerRequired": 600 },
+    { "name": "AMD Radeon RX 7600", "price": 279, "powerRequired": 550 },
+    { "name": "AMD Radeon RX 6750 XT", "price": 329, "powerRequired": 650 },
+    { "name": "AMD Radeon RX 6650 XT", "price": 249, "powerRequired": 500 }
   ],
   "motherboards": [
-    { "name": "ASUS Prime Z790-P", "price": 200, "socket": "intel" },
-    { "name": "MSI MAG B760 Tomahawk", "price": 180, "socket": "intel" },
-    { "name": "Gigabyte Z790 Aorus Elite", "price": 260, "socket": "intel" },
-    { "name": "ASUS ROG Strix Z790-F", "price": 380, "socket": "intel" },
+    { "name": "ASUS Prime B760M-K", "price": 130, "socket": "intel" },
+    { "name": "MSI MAG B760 Tomahawk WiFi", "price": 190, "socket": "intel" },
+    { "name": "Gigabyte Z790 Aorus Elite AX", "price": 270, "socket": "intel" },
+    { "name": "ASUS Prime Z790-P", "price": 210, "socket": "intel" },
+    { "name": "MSI MPG Z790 Edge WiFi", "price": 330, "socket": "intel" },
+    { "name": "ASUS ROG Strix Z790-F Gaming", "price": 390, "socket": "intel" },
+
+    { "name": "ASUS Prime A620M-A", "price": 120, "socket": "amd" },
     { "name": "ASUS Prime B650M-A", "price": 160, "socket": "amd" },
-    { "name": "MSI MAG B650 Tomahawk", "price": 210, "socket": "amd" },
-    { "name": "Gigabyte B650 Aorus Elite", "price": 230, "socket": "amd" },
-    { "name": "ASUS ROG Strix X670E-F", "price": 420, "socket": "amd" }
+    { "name": "MSI MAG B650 Tomahawk WiFi", "price": 220, "socket": "amd" },
+    { "name": "Gigabyte B650 Aorus Elite AX", "price": 240, "socket": "amd" },
+    { "name": "MSI MPG X670E Carbon WiFi", "price": 350, "socket": "amd" },
+    { "name": "ASUS ROG Strix X670E-F Gaming", "price": 430, "socket": "amd" }
   ],
   "psus": [
+    { "name": "Be Quiet! Pure Power 12M (550W)", "price": 90 },
+    { "name": "Corsair RM550x (550W)", "price": 100 },
+    { "name": "Seasonic Focus GX-650 (650W)", "price": 110 },
+    { "name": "Be Quiet! Pure Power 12M (750W)", "price": 115 },
+    { "name": "Seasonic Focus GX-750 (750W)", "price": 125 },
+    { "name": "Corsair RM750x (750W)", "price": 135 },
+    { "name": "MSI MAG A850GL (850W)", "price": 130 },
     { "name": "Corsair RM850x (850W)", "price": 150 },
     { "name": "Be Quiet! Pure Power 12M (750W)", "price": 110 },
     { "name": "EVGA SuperNOVA 1000 GT (1000W)", "price": 190 },
-    { "name": "MSI MAG A850GL (850W)", "price": 130 },
-    { "name": "Seasonic Focus GX-750 (750W)", "price": 120 }
+    { "name": "Corsair HX1200 (1200W)", "price": 250 }
+  ],
+  "rams": [
+    { "name": "Corsair Vengeance 16GB (2x8) DDR5 5200MHz", "price": 70 },
+    { "name": "Crucial Pro 16GB (2x8) DDR5 5600MHz", "price": 75 },
+    { "name": "Kingston Fury Beast 16GB (2x8) DDR5 5200MHz", "price": 80 },
+
+    { "name": "Kingston Fury Beast 32GB (2x16) DDR5 6000MHz", "price": 120 },
+    { "name": "Corsair Vengeance 32GB (2x16) DDR5 6000MHz", "price": 125 },
+    { "name": "G.Skill Ripjaws S5 32GB (2x16) DDR5 6000MHz", "price": 130 },
+    { "name": "Crucial Pro 32GB (2x16) DDR5 5600MHz", "price": 115 },
+
+    { "name": "G.Skill Trident Z5 RGB 32GB (2x16) DDR5 6400MHz", "price": 150 },
+    { "name": "Corsair Dominator Titanium 32GB (2x16) DDR5 6600MHz", "price": 190 },
+    { "name": "TeamGroup T-Force Delta RGB 32GB (2x16) DDR5 6000MHz", "price": 135 },
+
+    { "name": "G.Skill Trident Z5 RGB 64GB (2x32) DDR5 6400MHz", "price": 260 },
+    { "name": "Corsair Vengeance 64GB (2x32) DDR5 5600MHz", "price": 220 },
+    { "name": "Kingston Fury Renegade 64GB (2x32) DDR5 6400MHz", "price": 280 }
   ]
 }

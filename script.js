@@ -3,6 +3,7 @@ const calculateButton = document.getElementById("calc-btn");
 const cpuSelect = document.getElementById("cpu-select");
 const gpuSelect = document.getElementById("gpu-select");
 const psuSelect = document.getElementById("psu-select");
+const ramSelect = document.getElementById("ram-select");
 const motherboardSelect = document.getElementById("mb-select");
 const totalDisplay = document.getElementById("total-display");
 
@@ -15,8 +16,9 @@ const handleCalculation = function () {
     const selectedCpuPrice = Number(cpuSelect.value) || 0;
     const selectedGpuPrice = Number(gpuSelect.value) || 0;
     const selectedPsuPrice = Number(psuSelect.value) || 0;
+    const selectedRamPrice = Number(ramSelect.value) || 0;
     const selectedMbPrice = Number(motherboardSelect.value) || 0;
-    const totalPrice = selectedCpuPrice + selectedGpuPrice + selectedPsuPrice + selectedMbPrice;
+    const totalPrice = selectedCpuPrice + selectedGpuPrice + selectedPsuPrice + selectedRamPrice + selectedMbPrice;
     totalDisplay.textContent = `${totalPrice.toFixed(2)}€`;
 };
 
@@ -46,13 +48,14 @@ saveBtn.addEventListener("click", () => {
             cpu: cpuSelect.options[cpuSelect.selectedIndex].text,
             mb: motherboardSelect.options[motherboardSelect.selectedIndex].text,
             gpu: gpuSelect.options[gpuSelect.selectedIndex].text,
-            psu: psuSelect.options[psuSelect.selectedIndex].text
+            psu: psuSelect.options[psuSelect.selectedIndex].text,
+            ram: ramSelect.options[ramSelect.selectedIndex].text
         }
     };
 
     const li = document.createElement("li");
     li.innerHTML = `<strong>${name}</strong> - ${configData.price}<br>
-                    <small>${configData.parts.cpu} | ${configData.parts.mb} | ${configData.parts.gpu} | ${configData.parts.psu}</small><br>`;
+                    <small>${configData.parts.cpu} | ${configData.parts.mb} | ${configData.parts.gpu} | ${configData.parts.psu} | ${configData.parts.ram}</small><br>`;
 
     // Bouton Load
     const loadBtn = document.createElement("button");
@@ -73,8 +76,8 @@ saveBtn.addEventListener("click", () => {
 
 // Fonction pour charger la config
 function loadConfig(parts) {
-    const selects = [cpuSelect, motherboardSelect, gpuSelect, psuSelect];
-    const values = [parts.cpu, parts.mb, parts.gpu, parts.psu];
+    const selects = [cpuSelect, motherboardSelect, gpuSelect, psuSelect, ramSelect];
+    const values = [parts.cpu, parts.mb, parts.gpu, parts.psu, parts.ram];
 
     selects.forEach((select, i) => {
         for (let opt of select.options) {
@@ -94,9 +97,9 @@ async function initialiserConfigurateur() {
     const data = await response.json();
 
     const cpuSelect = document.getElementById("cpu-select");
-
+    const ramSelect = document.getElementById("ram-select");
     // On boucle sur chaque CPU de ton JSON
-    data.cpus.forEach(cpu => {
+    data.cpus.sort(cpu => {
         const option = document.createElement("option");
         option.value = cpu.price; // Le prix comme valeur
         option.textContent = `${cpu.name} (${cpu.price}€)`; // Le texte affiché
@@ -127,6 +130,13 @@ async function initialiserConfigurateur() {
         option.dataset.powerOutput = psu.powerOutput; // On garde l'info de la puissance fournie
         psuSelect.appendChild(option);
     });
+
+    data.rams.forEach(ram => {
+    const option = document.createElement("option");
+    option.value = ram.price;
+    option.textContent = `${ram.name} (${ram.price}€)`;
+    ramSelect.appendChild(option);
+});
 }
 
 // Appelle la fonction au chargement
