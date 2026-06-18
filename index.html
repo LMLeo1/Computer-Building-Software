@@ -26,18 +26,15 @@
 
                     <button id="logout-btn" style="display:none;">Déconnexion</button>
                 </div>
-
             </div>
         </div>
         <div class="welcome-content">
-            <h1>Léo's PC Build Configurator</h1>
+            <h1>Léo's Pc Configurator</h1>
             <h2>First website project, made with HTML, CSS and JS.</h2>
-
             <a href="#configurator-zone" class="btn-white">
                 Get Started <span class="arrow">➔</span>
             </a>
         </div>
-
     </section>
 
     <section id="configurator-zone">
@@ -45,12 +42,14 @@
             <hr>
             <h3>Save your configurations</h3>
             <input type="text" id="config-name" placeholder="Name your config (e.g., Gaming Pro)">
-            <button id="save-btn" type="button">Save</button>
 
             <div id="saved-list">
-                <h4>My configurations :</h4>
                 <ul id="configs-ul"></ul>
-            </div>
+                <div id="my-saved-configs">
+                    <h3>Saved configurations</h3>
+                    <ul id="configs-list">
+                    </ul>
+                </div>
         </section>
         <main class="container">
             <form id="configurator-form">
@@ -83,6 +82,7 @@
                         <option value="0">Select a PSU...</option>
                     </select>
                 </label>
+                <button id="save-config-btn">Save my configuration</button>
                 <form id="configurator-form">
                     <div class="footer-actions">
                         <button type="button" id="calc-btn">Calculate Total</button>

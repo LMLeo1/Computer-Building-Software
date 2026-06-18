@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #010102 0%, #2010f2 100%);
+    background: linear-gradient(135deg, #010102 0%, #1100ff 100%);
     color: #f8fafc; /* Texte blanc/argenté pour que ce soit lisible */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
@@ -56,7 +56,7 @@ h1 {
     -webkit-text-fill-color: transparent;
 
     /* L'effet de lueur (Glow) en arrière-plan */
-    text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
@@ -105,7 +105,7 @@ html, body {
     overflow-x: hidden;
 
     /* LE DÉGRADÉ GLOBAL FIXE */
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) !important;
+    background: linear-gradient(135deg, #1e00ff 0%, #000000 100%) !important;
     background-attachment: fixed; /* Garde le fond immobile pendant le scroll */
     }
 
@@ -118,6 +118,23 @@ html, body {
         opacity: 1;
         transform: translateY(0);   
     }
+}
+
+/* L'animation qui fait glisser vers le haut */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Commence 50px plus bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Finit à sa position normale */
+    }
+}
+
+/* On applique l'animation à tout le corps de la page */
+body {
+    animation: slideUp 1s ease-out forwards; /* Durée de 1 seconde */
 }
 
 #configurator-form {
@@ -223,6 +240,7 @@ font-size: 1.5rem;
     width: 100%;
     z-index: 1000;
     
+    
     /* La magie Flexbox */
     display: flex;
     justify-content: space-between; /* Espace entre le texte et le bouton */
@@ -246,4 +264,10 @@ font-size: 1.5rem;
     text-decoration: none; 
     font-weight: bold;
     display: inline-block;   
+}
+
+.ascii-art {
+    font-family: monospace; /* Indispensable pour que les caractères soient alignés */
+    font-size: 16px;       /* Ajuste la taille selon tes besoins */
+    line-height: 1;        /* Réduit l'espace entre les lignes */
 }
