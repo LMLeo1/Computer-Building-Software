@@ -210,3 +210,41 @@ font-size: 1.5rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.top-banner {
+    background-color: rgba(0, 112, 243, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* La magie Flexbox */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.top-banner p {
+    margin: 0; 
+    font-weight: bold;
+}
+
+.login-btn {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    background-color: white;
+    color: #0070f3;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+body {
+    padding-top: 60px; 
+}
