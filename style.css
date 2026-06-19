@@ -1,6 +1,6 @@
 body {
-    background: linear-gradient(135deg, #010102 0%, #1100ff 100%);
-    color: #f8fafc; /* Texte blanc/argenté pour que ce soit lisible */
+    background: linear-gradient(135deg, #f8f8fb 0%, #1100ff 100%);
+    color: #f8fafc; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     margin: 0;
@@ -105,7 +105,7 @@ html, body {
     overflow-x: hidden;
 
     /* LE DÉGRADÉ GLOBAL FIXE */
-    background: linear-gradient(135deg, #1e00ff 0%, #000000 100%) !important;
+    background: linear-gradient(135deg, #0036d8 0%, #02215b 100%) !important;
     background-attachment: fixed; /* Garde le fond immobile pendant le scroll */
     }
 
@@ -229,7 +229,7 @@ font-size: 1.5rem;
 }
 
 .top-banner {
-    background-color: rgba(0, 112, 243, 0.8);
+    background-color: rgba(0, 64, 255, 0.8);
     backdrop-filter: blur(5px);
     color: white;
     padding: 10px 20px; /* Un peu d'espace sur les côtés */
@@ -266,8 +266,34 @@ font-size: 1.5rem;
     display: inline-block;   
 }
 
-.ascii-art {
-    font-family: monospace; /* Indispensable pour que les caractères soient alignés */
-    font-size: 16px;       /* Ajuste la taille selon tes besoins */
-    line-height: 1;        /* Réduit l'espace entre les lignes */
+/* Quand l'écran est plus petit qu'un écran de PC (768px) */
+@media (max-width: 768px) {
+    
+    #configurator-zone {
+        display: flex;
+       flex-direction: column; /* 3. On force les enfants à s'empiler à la verticale ! */
+       input { elect {
+        width: 100%;
+       
+
+    }
+    
 }
+    }
+}
+
+h1 {
+        font-size: 2rem; }
+
+h2 {
+        font-size: 1.2rem; }
+
+        .top-banner {
+        flex-direction: column;   /* 1. On empile le texte et le bouton à la verticale */
+        gap: 8px;                 /* 2. On met un petit espace pour pas qu'ils se collent */
+        padding: 10px;            /* 3. On réduit le rembourrage pour gagner de la place */
+    }
+
+    .top-banner p {
+        justify-content: center;  /* 4. On recentre le texte du paragraphe sur mobile */
+    }

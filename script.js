@@ -65,7 +65,7 @@ function displayUserConfigs() {
     configsUl.innerHTML = "";
 
     if (myConfigs.length === 0) {
-        configsUl.innerHTML = "<li>You still not have configurations saved.</li>";
+        configsUl.innerHTML = "<li>Tu n'as pas de configuration sauvegardés</li>";
         return;
     }
 

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Build Configurator</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
@@ -16,8 +17,8 @@
 
     <section id="welcome-screen">
         <div class="top-banner">
-            <p id="promo-text">Make an account to save your configurations!</p>
-            <a href="login.html" id="login-link" class="login-btn">Login / Sign Up</a>
+            <p id="promo-text">Fait toi un compte pour sauvegarder tes configurations !</p>
+            <a href="login.html" id="login-link" class="login-btn">Connection</a>
             <div id="user-status">
                 <span id="welcome-message"></span>
                 <button id="logout-btn" style="display:none;">Déconnexion</button>
@@ -30,9 +31,10 @@
         </div>
         <div class="welcome-content">
             <h1>Léo's Pc Configurator</h1>
-            <h2>First website project, made with HTML, CSS and JS.</h2>
+            <h2>Premier Projet fait avec HTML, Css et JS.</h2>
+            <h3> </h3>
             <a href="#configurator-zone" class="btn-white">
-                Get Started <span class="arrow">➔</span>
+                Commence ton montage <span class="arrow">➔</span>
             </a>
         </div>
     </section>
@@ -40,13 +42,13 @@
     <section id="configurator-zone">
         <section id="save-section" class="container">
             <hr>
-            <h3>Save your configurations</h3>
+            <h3>Sauvegarde tes configurations</h3>
             <input type="text" id="config-name" placeholder="Name your config (e.g., Gaming Pro)">
 
             <div id="saved-list">
                 <ul id="configs-ul"></ul>
                 <div id="my-saved-configs">
-                    <h3>Saved configurations</h3>
+                    <h3>Configurations sauvgardés</h3>
                     <ul id="configs-list">
                     </ul>
                 </div>
@@ -54,48 +56,48 @@
         <main class="container">
             <form id="configurator-form">
 
-                <label> Central Processing Unit (CPU)
+                <label> Processeur (CPU)
                     <select id="cpu-select" required>
-                        <option value="0">Select a CPU...</option>
+                        <option value="0">Selectionne un CPU..</option>
                     </select>
                 </label>
-                <label> Random Access Memory (RAM)
+                <label> Mémoire Vive (RAM)
                     <select id="ram-select" required>
-                        <option value="0">Select RAM...</option>
+                        <option value="0">Selectionne ta RAM...</option>
                     </select>
                 </label>
 
-                <label> Motherboard
+                <label> Carte mère
                     <select id="mb-select" required>
-                        <option value="0">Select a Motherboard...</option>
+                        <option value="0">Selectionne ta carte mère...</option>
                     </select>
                 </label>
 
-                <label> Graphics Card (GPU)
+                <label> Cartes Graphiques(GPU)
                     <select id="gpu-select" required>
-                        <option value="0">Select a GPU...</option>
+                        <option value="0">Selectionne un GPU...</option>
                     </select>
                 </label>
 
                 <label> Alimentations (PSU)
                     <select id="psu-select" required>
-                        <option value="0">Select a PSU...</option>
+                        <option value="0">Selectionne une PSU...</option>
                     </select>
                 </label>
-                <button id="save-config-btn">Save my configuration</button>
-                <form id="configurator-form">
-                    <div class="footer-actions">
-                        <button type="button" id="calc-btn">Calculate Total</button>
-                        <div id="price-box">
-                            <span id="total-label">Total:</span>
-                            <span id="total-display">0€</span>
+                <button id="save-config-btn">Sauvegarde ma configuration
+                    <form id="configurator-form">
+                        <div class="footer-actions">
+                            <button type="button" id="calc-btn">Calcule le total</button>
+                            <div id="price-box">
+                                <span id="total-label">Total:</span>
+                                <span id="total-display">0€</span>
+                            </div>
                         </div>
+                    </form>
+                    <div id="image-container">
                     </div>
-                </form>
-                <div id="image-container">
-                </div>
-                </div>
-                <a href="contact.html">Dm me if you find bugs</a>
+                    </div>
+                    <a href="contact.html">Contacte moi si tu trouve un bug</a>
             </form>
         </main>
         <script src="script.js"></script>
