@@ -14,7 +14,7 @@ article {
 }
 
 button {
-    background: linear-gradient(90deg, #0101fd 0%, #3b82f6 100%);
+    background: linear-gradient(90deg, #696969 0%, #8c8c8c 100%);
     color: white;
     border: none;
     padding: 14px 28px;
@@ -27,8 +27,8 @@ button {
 }
 
 button:hover {
-background-color: #0101fd; 
-box-shadow: 0 0 15px #0101fd;
+background-color: #ffffff; 
+box-shadow: 0 0 15px #ffffff;
 transform: translateY(-2px);
 }
 
@@ -50,7 +50,7 @@ h1 {
     margin-bottom: 20px;
 
     /* MAGIE : On applique le dégradé à l'intérieur des lettres */
-    background: linear-gradient(45deg, #00f2fe 0%, #0388fc 100%);
+    background: linear-gradient(45deg, #232424 0%, #0388fc 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,7 +62,7 @@ h1 {
 h2 {
     font-size: 1.2rem;        
     text-align: center;       
-    color: #0d72ff;           
+    color: #0d2548;           
     font-weight: 400;       
     letter-spacing: 1px;     
     margin-bottom: 40px;       
@@ -105,7 +105,7 @@ html, body {
     overflow-x: hidden;
 
     /* LE DÉGRADÉ GLOBAL FIXE */
-    background: linear-gradient(135deg, #0036d8 0%, #02215b 100%) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #313336 100%) !important;
     background-attachment: fixed; /* Garde le fond immobile pendant le scroll */
     }
 
@@ -185,7 +185,7 @@ body {
 }
 
 #total-display {
-    color: #00f2fe; /* La couleur cyan de ton titre pour faire un rappel */
+    color: #d8f5f9; /* La couleur cyan de ton titre pour faire un rappel */
     font-weight: bold;
 }
 
@@ -207,7 +207,7 @@ h3 {
     letter-spacing: 2px;   
     text-align: left;
 
-    background: linear-gradient(45deg, #00f2fe 0%, #0388fc 100%);
+    background: linear-gradient(45deg, #000000 0%, #0388fc 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -229,12 +229,11 @@ font-size: 1.5rem;
 }
 
 .top-banner {
-    background-color: rgba(0, 64, 255, 0.8);
+    background-color: rgba(81, 81, 81, 0.8);
     backdrop-filter: blur(5px);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 20px; /* Un peu d'espace sur les côtés */
     position: fixed;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -257,7 +256,7 @@ font-size: 1.5rem;
 
 .login-btn {
     padding: 10px 12px;
-    background: linear-gradient(90deg, #0084ff 0%, #52aeff 100%);
+    background: linear-gradient(90deg, #6e6e6e 0%, #868686 100%);
     background-color: white;
     color: #ffffff;
     border-radius: 6px;
@@ -297,3 +296,108 @@ h2 {
     .top-banner p {
         justify-content: center;  /* 4. On recentre le texte du paragraphe sur mobile */
     }
+
+    /* Style des slots de composants sur la page principale */
+.component-slot {
+    margin-bottom: 20px;
+}
+.slot-preview {
+    padding: 15px;
+    border: 2px dashed #334155;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #0f172a;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.slot-preview:hover {
+    border-color: #00e5ff;
+    background: #1e293b;
+}
+.slot-preview img {
+    max-height: 50px;
+    border-radius: 4px;
+}
+
+/* Grille interne de l'énorme catalogue de composants */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Fiche individuelle d'un composant dans la popup */
+.component-card {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+.component-card:hover {
+    transform: translateY(-2px);
+    border-color: #ffffff;
+}
+.component-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 5px;
+}
+.component-card h4 {
+    font-size: 0.95rem;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+.component-card .price {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo-top-banner {
+    max-height: 40px; /* Adapte la hauteur pour pas que ça casse la bannière */
+    display: block;
+    margin: 0 auto; /* Centre le logo */
+}
+
+/* Conteneur des onglets au milieu */
+.banner-tabs {
+    display: flex;
+    gap: 30px;
+    height: 100%; /* Permet aux onglets de prendre toute la hauteur de la bannière */
+}
+
+/* Style de base des onglets (écriture blanche, en majuscules) */
+.tab-link {
+    color: #ffffff !important;
+    text-transform: uppercase; /* Force le texte en MAJUSCULES comme Mifcom */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    border-bottom: 4px solid transparent; /* Ligne invisible par défaut */
+    transition: all 0.2s ease-in-out;
+}
+
+/* L'effet magique : barre ROUGE au survol et sur l'onglet actif */
+.tab-link:hover, .tab-link.active {
+    border-bottom: 4px solid #ffffff !important; /* Le rouge vif gaming */
+    color: #ffffff !important;
+}

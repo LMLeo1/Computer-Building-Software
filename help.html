@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Build Configurator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-banner" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 30px; height: 70px; background: linear-gradient(90deg, #343434 0%, #adadad 100%);">
+    
+    <img src="icon.png" alt="Logo" style="height: 50px; display: block;">
+
+    <div class="banner-tabs">
+        <a href="index.html" class="tab-link id-configurateur">Configurateur</a>
+        <a href="#" class="tab-link id-configs">Mes Configs</a>
+        <a href="help.html" class="tab-link id-aide">Aide</a>
+        <a href="contact.html" class="tab-link id-support">Support</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <span id="welcome-message" style="margin: 0; font-size: 14px;"></span>
+        <a href="login.html" id="login-link" class="login-btn" style="margin: 0;">Connection</a>
+        <button id="logout-btn" style="display: none; width: auto !important; margin: 0; padding: 5px 20px;">Déconnexion</button>
+    </div>
+    
+</div>
+
+    <h1>
+        <section style="max-width: 800px; margin: 0 auto; padding: 15px; font-size: 13px; line-height: 1.4; color: #dbe2ef;">
+    
+    <h2 style="text-align: center; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; font-size: 16px; color: #fff;">
+    </h2>
+
+    <p>📑Bienvenue sur l'espace d'assistance. Ce guide a pour objectif de vous accompagner pas à pas dans la conception de votre infrastructure matérielle, que vous assembliez votre premier ordinateur grand public ou une station de travail haut de gamme.</p>
+
+    <hr style="margin: 15px 0; opacity: 0.2;">
+
+    <h3 style="font-size: 14px; margin-top: 15px; margin-bottom: 5px; color: #fff;">⚙️ Fonctionnement du configurateur</h3>
+    <p>L'élaboration d'une configuration sur mesure s'effectue de manière séquentielle et intuitive :</p>
+    <ul style="padding-left: 15px; margin-bottom: 15px;">
+        <li><strong>Sélection d'une catégorie :</strong> Cliquez sur l'emplacement du composant de votre choix (Processeur, Carte Graphique, Mémoire RAM...) pour ouvrir le catalogue dédié.</li>
+        <li><strong>Intégration au build :</strong> Parcourez les caractéristiques techniques et les visuels officiels mis à jour, puis validez votre sélection via le bouton "Choisir".</li>
+        <li><strong>Mise à jour en temps réel :</strong> Dès la validation, la vue d'ensemble de votre configuration intègre le nouveau composant et le montant total du devis est recalculé instantanément en bas de page.</li>
+    </ul>
+
+    <hr style="margin: 15px 0; opacity: 0.2;">
+
+    <h3 style="font-size: 14px; margin-top: 15px; margin-bottom: 5px; color: #fff;">💾 Gestion et Sauvegarde de vos Projets</h3>
+    <p>Pour conserver l'historique de vos architectures ou finaliser votre projet ultérieurement, un système de sauvegarde cloud-local est à votre disposition :</p>
+    <ul style="padding-left: 15px; margin-bottom: 15px;">
+        <li><strong>Authentification sécurisée :</strong> Accédez à l'espace de création de compte via le bouton "Connexion" situé dans la barre de navigation supérieure.</li>
+        <li><strong>Enregistrement du projet :</strong> Une fois connecté, attribuez un nom à votre configuration hardware dans le champ dédié et cliquez sur "Sauvegarder".</li>
+        <li><strong>Restauration et modification :</strong> Vos configurations enregistrées restent accessibles à tout moment. Vous pouvez charger (<em>Load</em>) une architecture existante pour la modifier ou la purger (<em>Delete</em>).</li>
+    </ul>
+
+    <hr style="margin: 15px 0; opacity: 0.2;">
+
+    <h3 style="font-size: 14px; margin-top: 15px; margin-bottom: 5px; color: #fff;">🛡️ Algorithme de Compatibilité Matérielle</h3>
+    <p>Our système intègre une vérification automatisée des architectures afin de garantir la cohérence technique de vos composants :</p>
+    
+    <blockquote style="border-left: 3px solid #ff0033; padding: 8px 12px; background: rgba(255,255,255,0.02); margin: 10px 0; font-size: 12px; line-height: 1.4;">
+        <strong>⚠️ Règle d'assemblage cruciale :</strong> Il est fortement recommandé de sélectionner votre <strong>Processeur (CPU)</strong> en premier lieu. Le catalogue des <strong>Cartes Mères</strong> filtrera automatiquement les résultats pour ne proposer que les modèles dotés du <strong>Socket</strong> compatible (Intel ou AMD). Toute modification ultérieure du processeur entraînera la réinitialisation de la carte mère afin de prévenir tout risque d'incompatibilité physique au montage.
+    </blockquote>
+
+    <hr style="margin: 15px 0; opacity: 0.2;">
+
+    <h3 style="font-size: 14px; margin-top: 15px; margin-bottom: 10px; color: #fff;">❓ Foire Aux Questions (FAQ)</h3>
+    
+    <p style="margin-bottom: 10px;"><strong>Le montant total inclut-il une prestation de montage en atelier ?</strong><br>
+    Non, les tarifs affichés correspondent exclusivement au coût d'acquisition des composants individuels. L'assemblage final et le câblage de la machine restent à la charge de l'utilisateur.</p>
+
+    <p style="margin-bottom: 10px;"><strong>Où sont stockées mes données de configuration ?</strong><br>
+    Afin de garantir la confidentialité et la rapidité d'accès à vos données, vos informations de compte et vos configurations sont stockées localement via l'espace de stockage de votre navigateur. Veuillez noter que la suppression de votre historique de navigation ou le nettoyage des cookies entraînera la réinitialisation de ces données.</p>
+
+    <p style="margin-bottom: 10px;"><strong>Un composant spécifique est absent du catalogue. Que faire ?</strong><br>
+    Notre base de données est synchronisée régulièrement avec les dernières nouveautés du marché hardware. Si une référence de premier plan manque à l'appel, notre support technique reste à votre disposition pour analyser son intégration dans le catalogue.</p>
+
+</section>

@@ -1,20 +1,18 @@
 {
   "cpus": [
-    { "name": "Intel Core i3-14100F", "price": 120, "socket": "intel" },
-    { "name": "Intel Core i5-13400F", "price": 200, "socket": "intel" },
-    { "name": "Intel Core i5-14600K", "price": 300, "socket": "intel" },
-    { "name": "Intel Core i7-13700K", "price": 350, "socket": "intel" },
-    { "name": "Intel Core i7-14700K", "price": 400, "socket": "intel" },
-    { "name": "Intel Core Ultra 7 265K", "price": 390, "socket": "intel" },
-    { "name": "Intel Core i9-14900K", "price": 550, "socket": "intel" },
+    { "name": "Intel Core i3-14100F", "price": 120, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/09/60/LD0006096030_0006096052.jpg" },
+    { "name": "Intel Core i5-13400F", "price": 200, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/07/49/LD0006074906.jpg" },
+    { "name": "Intel Core i5-14600K", "price": 300, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/07/49/LD0006074917.jpg" },
+    { "name": "Intel Core i7-13700K", "price": 350, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/00/26/LD0006002674.jpg" },
+    { "name": "Intel Core i7-14700K", "price": 400, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/09/57/LD0006095758_0006095801.jpg" },
+    { "name": "Intel Core Ultra 7 265KF", "price": 390, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/17/52/LD0006175258.jpg" },
+    { "name": "Intel Core i9-14900K", "price": 550, "socket": "intel", "image": "https://media.ldlc.com/r705/ld/products/00/06/07/49/LD0006074923.jpg" },
 
-    { "name": "AMD Ryzen 5 7500F", "price": 170, "socket": "amd" },
-    { "name": "AMD Ryzen 5 7600X", "price": 220, "socket": "amd" },
-    { "name": "AMD Ryzen 7 7700X", "price": 300, "socket": "amd" },
-    { "name": "AMD Ryzen 7 7800X3D", "price": 370, "socket": "amd" },
-    { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd" },
-    { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd" },
-    { "name": "AMD Ryzen 9 9950X", "price": 650, "socket": "amd" }
+    { "name": "AMD Ryzen 5 7500F", "price": 170, "socket": "amd", "image": "https://media.ldlc.com/r705/ld/products/00/06/22/48/LD0006224837_0006224838.jpg" },
+    { "name": "AMD Ryzen 5 7600X", "price": 220, "socket": "amd", "image": "https://media.ldlc.com/r705/ld/products/00/06/00/27/LD0006002701.jpg" },
+    { "name": "AMD Ryzen 7 7800X3D", "price": 370, "socket": "amd", "image": "https://media.ldlc.com/r705/ld/products/00/06/29/94/LD0006299410.jpg" },
+    { "name": "AMD Ryzen 9 7950X", "price": 450, "socket": "amd", "image": "https://m.media-amazon.com/images/I/5116zdA9uyL._AC_SL1200_.jpg" },
+    { "name": "AMD Ryzen 9 9950X", "price": 650, "socket": "amd" , "image": "https://media.ldlc.com/r705/ld/products/00/06/22/00/LD0006220051.jpg" }
   ],
   "gpus": [
     { "name": "NVIDIA RTX 5090", "price": 1999, "powerRequired": 900 },

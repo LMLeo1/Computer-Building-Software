@@ -16,27 +16,41 @@
 <body>
 
     <section id="welcome-screen">
-        <div class="top-banner">
-            <p id="promo-text">Fait toi un compte pour sauvegarder tes configurations !</p>
-            <a href="login.html" id="login-link" class="login-btn">Connection</a>
+        <div class="top-banner"
+            style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 30px; height: 70px; background: linear-gradient(90deg, #343434 0%, #adadad 100%);">
+            <img src="icon.png" alt="Logo" style="height: 50px; display: block;">
+
+            <div class="banner-tabs">
+                <a href="index.html" class="tab-link">Configurateur</a>
+                <a href="#" class="tab-link">Mes Configs</a>
+                <a href="help.html" class="tab-link">Aide</a>
+                <a href="contact.html" class="tab-link">Support</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span id="welcome-message" style="margin: 0; font-size: 14px;"></span>
+                <a href="login.html" id="login-link" class="login-btn" style="margin: 0;">Connection</a>
+                <button id="logout-btn"
+                    style="display: none; width: auto !important; margin: 0; padding: 5px 20px;">Déconnexion</button>
+            </div>
+
+            </div>
             <div id="user-status">
                 <span id="welcome-message"></span>
-                <button id="logout-btn" style="display:none;">Déconnexion</button>
                 <div id="user-status">
                     <span id="welcome-message"></span>
 
-                    <button id="logout-btn" style="display:none;">Déconnexion</button>
                 </div>
             </div>
-        </div>
-        <div class="welcome-content">
-            <h1>Léo's Pc Configurator</h1>
-            <h2>Premier Projet fait avec HTML, Css et JS.</h2>
-            <h3> </h3>
-            <a href="#configurator-zone" class="btn-white">
-                Commence ton montage <span class="arrow">➔</span>
-            </a>
-        </div>
+            </div>
+            <div class="welcome-content">
+                <h1>Léo's Pc Configurator</h1>
+                <h2>Premier Projet fait avec HTML, Css et JS.</h2>
+                <h3> </h3>
+                <a href="#configurator-zone" class="btn-white">
+                    Commence ton montage <span class="arrow">➔</span>
+                </a>
+            </div>
     </section>
 
     <section id="configurator-zone">
@@ -54,53 +68,86 @@
                 </div>
         </section>
         <main class="container">
-            <form id="configurator-form">
+            <div id="configurator-form">
 
-                <label> Processeur (CPU)
-                    <select id="cpu-select" required>
+                <div class="component-slot" data-category="cpus" data-select-id="cpu-select">
+                    <label>Processeur (CPU)</label>
+                    <div class="slot-preview" id="cpu-preview">
+                        <span>Sélectionner un CPU...</span>
+                    </div>
+                    <select id="cpu-select" required style="display:none;">
                         <option value="0">Selectionne un CPU..</option>
                     </select>
-                </label>
-                <label> Mémoire Vive (RAM)
-                    <select id="ram-select" required>
+                </div>
+
+                <div class="component-slot" data-category="rams" data-select-id="ram-select">
+                    <label>Mémoire Vive (RAM)</label>
+                    <div class="slot-preview" id="ram-preview">
+                        <span>Sélectionner ta RAM...</span>
+                    </div>
+                    <select id="ram-select" required style="display:none;">
                         <option value="0">Selectionne ta RAM...</option>
                     </select>
-                </label>
+                </div>
 
-                <label> Carte mère
-                    <select id="mb-select" required>
+                <div class="component-slot" data-category="motherboards" data-select-id="mb-select">
+                    <label>Carte mère</label>
+                    <div class="slot-preview" id="mb-preview">
+                        <span>Sélectionner ta carte mère...</span>
+                    </div>
+                    <select id="mb-select" required style="display:none;">
                         <option value="0">Selectionne ta carte mère...</option>
                     </select>
-                </label>
+                </div>
 
-                <label> Cartes Graphiques(GPU)
-                    <select id="gpu-select" required>
+                <div class="component-slot" data-category="gpus" data-select-id="gpu-select">
+                    <label>Carte Graphique (GPU)</label>
+                    <div class="slot-preview" id="gpu-preview">
+                        <span>Sélectionner un GPU...</span>
+                    </div>
+                    <select id="gpu-select" required style="display:none;">
                         <option value="0">Selectionne un GPU...</option>
                     </select>
-                </label>
+                </div>
 
-                <label> Alimentations (PSU)
-                    <select id="psu-select" required>
+                <div class="component-slot" data-category="psus" data-select-id="psu-select">
+                    <label>Alimentation (PSU)</label>
+                    <div class="slot-preview" id="psu-preview">
+                        <span>Sélectionner une PSU...</span>
+                    </div>
+                    <select id="psu-select" required style="display:none;">
                         <option value="0">Selectionne une PSU...</option>
                     </select>
-                </label>
-                <button id="save-config-btn">Sauvegarde ma configuration
-                    <form id="configurator-form">
-                        <div class="footer-actions">
-                            <button type="button" id="calc-btn">Calcule le total</button>
-                            <div id="price-box">
-                                <span id="total-label">Total:</span>
-                                <span id="total-display">0€</span>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="image-container">
+                </div>
+
+                <div class="footer-actions">
+                    <div id="price-box">
+                        <span id="total-label">Total:</span>
+                        <span id="total-display">0€</span>
                     </div>
-                    </div>
+                </div>
+
+                <button id="save-config-btn" style="margin-top: 20px;">Sauvegarde ma configuration</button>
+                <div style="text-align: center; margin-top: 20px;">
                     <a href="contact.html">Contacte moi si tu trouve un bug</a>
-            </form>
+                </div>
+            </div>
         </main>
-        <script src="script.js"></script>
+    </section>
+
+    <dialog id="catalog-modal">
+        <article style="max-width: 1200px; width: 95%;">
+            <header>
+                <a href="#close" aria-label="Close" class="close" id="close-modal"></a>
+                <h3 id="modal-title">Catalogue des composants</h3>
+            </header>
+            <div id="modal-catalog-grid" class="catalog-grid"></div>
+        </article>
+    </dialog>
+    </div>
+    </form>
+    </main>
+    <script src="script.js"></script>
     </section>
 </body>
 
