@@ -298,3 +298,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// REMPLACE TON CODE BURGER PAR CELUI-CI TOUT EN BAS DE SCRIPT.JS
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerBtn = document.getElementById('burger-btn');
+    const navTabs = document.getElementById('nav-tabs');
+
+    if (burgerBtn && navTabs) {
+        burgerBtn.addEventListener('click', () => {
+            console.log("Clic détecté ! Le menu va basculer."); 
+            navTabs.classList.toggle('open');
+            
+            if (navTabs.classList.contains('open')) {
+                burgerBtn.innerHTML = '&times;'; 
+            } else {
+                burgerBtn.innerHTML = '&#9776;'; 
+            }
+        });
+    } else {
+        console.log("Attention : Le bouton burger ou le menu nav-tabs est introuvable dans l'HTML.");
+    }
+});
