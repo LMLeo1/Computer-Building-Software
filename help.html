@@ -14,16 +14,18 @@
 </head>
 
 <body>
-    <div class="top-banner" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 30px; height: 70px; background: linear-gradient(90deg, #343434 0%, #adadad 100%);">
-    
-    <img src="icon.png" alt="Logo" style="height: 50px; display: block;">
+    <div class="top-banner"
+            style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 30px; height: 70px; background: linear-gradient(90deg, #343434 0%, #adadad 100%);">
 
-    <div class="banner-tabs">
-        <a href="index.html" class="tab-link id-configurateur">Configurateur</a>
-        <a href="#" class="tab-link id-configs">Mes Configs</a>
-        <a href="help.html" class="tab-link id-aide">Aide</a>
-        <a href="contact.html" class="tab-link id-support">Support</a>
-    </div>
+            <button id="burger-btn" class="burger-menu-btn">&#9776;</button>
+
+            <img src="icon.png" alt="Logo" style="height: 50px; display: block;">
+
+            <div class="banner-tabs" id="nav-tabs">
+                <a href="index.html" class="tab-link">Configurateur</a>
+                <a href="help.html" class="tab-link">Aide</a>
+                <a href="contact.html" class="tab-link">Support</a>
+            </div>
 
     <div style="display: flex; align-items: center; gap: 15px;">
         <span id="welcome-message" style="margin: 0; font-size: 14px;"></span>
@@ -33,13 +35,10 @@
     
 </div>
 
-    <h1>
         <section style="max-width: 800px; margin: 0 auto; padding: 15px; font-size: 13px; line-height: 1.4; color: #dbe2ef;">
     
     <h2 style="text-align: center; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; font-size: 16px; color: #fff;">
-    </h2>
-
-    <p>📑Bienvenue sur l'espace d'assistance. Ce guide a pour objectif de vous accompagner pas à pas dans la conception de votre infrastructure matérielle, que vous assembliez votre premier ordinateur grand public ou une station de travail haut de gamme.</p>
+    </h2>a
 
     <hr style="margin: 15px 0; opacity: 0.2;">
 
@@ -64,7 +63,7 @@
     <hr style="margin: 15px 0; opacity: 0.2;">
 
     <h3 style="font-size: 14px; margin-top: 15px; margin-bottom: 5px; color: #fff;">🛡️ Algorithme de Compatibilité Matérielle</h3>
-    <p>Our système intègre une vérification automatisée des architectures afin de garantir la cohérence technique de vos composants :</p>
+    <p>Notre système intègre une vérification automatisée des architectures afin de garantir la cohérence technique de vos composants :</p>
     
     <blockquote style="border-left: 3px solid #ff0033; padding: 8px 12px; background: rgba(255,255,255,0.02); margin: 10px 0; font-size: 12px; line-height: 1.4;">
         <strong>⚠️ Règle d'assemblage cruciale :</strong> Il est fortement recommandé de sélectionner votre <strong>Processeur (CPU)</strong> en premier lieu. Le catalogue des <strong>Cartes Mères</strong> filtrera automatiquement les résultats pour ne proposer que les modèles dotés du <strong>Socket</strong> compatible (Intel ou AMD). Toute modification ultérieure du processeur entraînera la réinitialisation de la carte mère afin de prévenir tout risque d'incompatibilité physique au montage.
@@ -82,5 +81,5 @@
 
     <p style="margin-bottom: 10px;"><strong>Un composant spécifique est absent du catalogue. Que faire ?</strong><br>
     Notre base de données est synchronisée régulièrement avec les dernières nouveautés du marché hardware. Si une référence de premier plan manque à l'appel, notre support technique reste à votre disposition pour analyser son intégration dans le catalogue.</p>
-
+ <script src="script.js"></script>
 </section>
